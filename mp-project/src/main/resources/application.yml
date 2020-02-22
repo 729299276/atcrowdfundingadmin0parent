@@ -1,0 +1,12 @@
+###服务启动端口号
+server:
+  port: 8300
+spring:
+  application:
+    name: atc_gene
+  datasource:
+    username: root
+    password:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ghui?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+
