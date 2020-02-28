@@ -10,6 +10,8 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
@@ -21,15 +23,14 @@ import java.util.List;
  * @author tian
  * @since 2020-02-14
  */
-@Service
+@RestController
 public class TAdminServiceImpl extends ServiceImpl<TAdminMapper, TAdmin> implements TAdminService {
     @Autowired
     private TAdminMapper tAdminMapper;
-    public TAdmin getByName(String name){
-        QueryWrapper qw = new QueryWrapper();
-        qw.eq("username",name);
-        TAdmin tAdmin = tAdminMapper.selectOne(qw);
-        System.out.println("tAdmin{}数据："+tAdmin);
+    @GetMapping("test")
+    public TAdmin getByName(Integer id){
+        TAdmin tAdmin = tAdminMapper.getRoleByName(1);
+        System.out.println(tAdmin);
         return tAdmin;
     }
     //根据关键字分页查询

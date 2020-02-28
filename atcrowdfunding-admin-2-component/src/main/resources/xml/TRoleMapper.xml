@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.atguigu.crowd.funding.mapper.TRoleMapper">
-    <select id="getRoleByKey" resultMap="com.atguigu.crowd.funding.entity.TRole">
-      select * from t_role where name like concat("%",#{keyword},"%")
-    </select>
-</mapper>

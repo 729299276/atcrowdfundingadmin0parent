@@ -13,6 +13,6 @@ import com.github.pagehelper.PageInfo;
  * @since 2020-02-14
  */
 public interface TAdminService extends IService<TAdmin> {
-      public TAdmin getByName(String name);
+      public TAdmin getByName(Integer id);
       PageInfo<TAdmin> selectByKey(Integer page,Integer size,String keyword);
 }

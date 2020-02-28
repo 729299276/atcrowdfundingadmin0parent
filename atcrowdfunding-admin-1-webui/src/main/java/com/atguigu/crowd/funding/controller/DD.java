@@ -3,8 +3,11 @@ package com.atguigu.crowd.funding.controller;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
+import java.security.PublicKey;
+
 @Component
 public class DD {
+
     @Async
     public void syss(){
 

@@ -2,6 +2,7 @@ package com.atguigu.crowd.funding.mapper;
 
 import com.atguigu.crowd.funding.entity.TAdmin;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -15,4 +16,5 @@ import java.util.List;
  */
 public interface TAdminMapper extends BaseMapper<TAdmin> {
     List<TAdmin> selectAdminByKey(String keyword);
+    TAdmin getRoleByName(@Param("id") Integer id);
 }
